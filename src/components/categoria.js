@@ -5,6 +5,7 @@ function categoria() {
     return (
         <div>
             <img src={Cate}/>
+           
         </div>
     )
 }
