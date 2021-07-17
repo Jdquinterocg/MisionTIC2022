@@ -1,8 +1,13 @@
 import React from 'react'
 import uniqid from 'uniqid'
 
+import Header from '../components/Header'
 import Usuario from '../components/Usuario'
 import Pedidos from '../components/Pedidos'
+import Footer from '../components/Footer'
+
+import './styles/User.css'
+
 
 class User extends React.Component {
     
@@ -12,8 +17,8 @@ class User extends React.Component {
         hora: '7:30 pm',
         valor: 12000,
         productos: [
-            {name: 'arroz', id: uniqid()},
-            {name: 'leche', id: uniqid()},
+            {name: 'Arroz', id: uniqid()},
+            {name: 'Leche', id: uniqid()},
             {name: 'Queso', id: uniqid()}]
     }
     
@@ -43,10 +48,8 @@ class User extends React.Component {
         const domicilios = this.state.data.domicilio;
         console.log(domicilios);
         return (
-            <div>
-                <div className="Header">
-                    Tienda Doña Paquita
-                </div>
+            <div className="Hero">
+                <Header />
 
                 <Usuario 
                     nombre={user.nombre}
@@ -58,10 +61,7 @@ class User extends React.Component {
 
                 <Pedidos domicilios={domicilios} />
                     
-
-                <div className="Footer">
-                    Footer
-                </div>
+                <Footer />
             </div>
         )
     }
