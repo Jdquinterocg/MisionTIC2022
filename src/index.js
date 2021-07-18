@@ -2,8 +2,11 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
+<<<<<<< Updated upstream
 import reportWebVitals from './reportWebVitals';
 
+=======
+>>>>>>> Stashed changes
 import 'bootstrap/dist/css/bootstrap.min.css'
 
 ReactDOM.render(
