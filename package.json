@@ -43,7 +43,6 @@
   "description": "",
   "main": "index.js",
   "devDependencies": {
-    
     "nodemon": "^2.0.12",
     "webpack": "^5.45.1",
     "webpack-cli": "^4.7.2"
