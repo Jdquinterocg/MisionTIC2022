@@ -1,6 +1,6 @@
 import Login from './pages/Login';
 import Register from './pages/Register';
-import User from "./paginas/User";
+import User from "./pages/User";
 
 function App() {
   return (
