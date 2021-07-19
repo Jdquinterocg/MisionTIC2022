@@ -73,8 +73,8 @@ class Carrito extends Component {
                                     })}
                 </ul>
         
-            <button class="btn btn-outline-info"> Seleccionar más productos </button>
-            <button class="btn btn-outline-danger float-end"> Caja registradora </button>
+            <button className="btn btn-outline-info"> Seleccionar más productos </button>
+            <button className="btn btn-outline-danger float-end"> Caja registradora </button>
                 </div>
             </div>
         );
