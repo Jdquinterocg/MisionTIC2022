@@ -1,12 +1,11 @@
-
 import React, { Component } from 'react';
-import uniqid from 'uniqid'
+// import uniqid from 'uniqid'
 
 
 class Carrito extends Component {
 
     producto1 = {
-        id:uniqid(),
+        id:1,
         nombre: 'leche',
         precio: 2100,
         cantidad: 1,
@@ -14,7 +13,7 @@ class Carrito extends Component {
     }
 
     producto2 = {
-        id:uniqid(),
+        id:2,
         nombre: 'huevos',
         precio: 300,
         cantidad: 3,
@@ -73,8 +72,8 @@ class Carrito extends Component {
                                     })}
                 </ul>
         
-            <button class="btn btn-outline-info"> Seleccionar más productos </button>
-            <button class="btn btn-outline-danger float-end"> Caja registradora </button>
+            <button className="btn btn-outline-info"> Seleccionar más productos </button>
+            <button className="btn btn-outline-danger float-end"> Caja registradora </button>
                 </div>
             </div>
         );
