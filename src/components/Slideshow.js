@@ -1,6 +1,6 @@
 import React, {useRef, useEffect, useCallback} from 'react';
-// import {ReactComponent as FlechaIzquierda} from './../img/iconmonstr-angel-left-thin.svg';
-// import {ReactComponent as FlechaDerecha} from './../img/iconmonstr-angel-right-thin.svg';
+// import {ReactComponent as FlechaIzquierda} from '../imagenes/img-home/flechaI.jpeg';
+// import {ReactComponent as FlechaDerecha} from '../imagenes/img-home/flechaD.jpeg';
 import styled from 'styled-components';
 
 const Slideshow = ({

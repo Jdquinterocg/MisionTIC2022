@@ -1,12 +1,14 @@
 import React from 'react'
 import Card from './Card'
 
-import Aseo from '../assets/Aseo.jpg'
-import Frutas from '../assets/Frutas.jpg'
-import Lacteos from '../assets/Lacteos.jpg'
-import Varios from '../assets/Varios.jpg'
+import Aseo from '../imagenes/categorias-home/Aseo.jpg'
+import Frutas from '../imagenes/categorias-home/Frutas.jpg'
+import Lacteos from '../imagenes/categorias-home/Lacteos.jpg'
+import Varios from '../imagenes/categorias-home/Varios.jpg'
 
-const cards =[
+import './styles/Cards.css'
+
+const cards = [
     {
         id: 1,
         title:'Aseo',

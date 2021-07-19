@@ -1,13 +1,13 @@
 import React from 'react'
-import Cate from '../assets/cate.png'
+import Cate from '../imagenes/img-home/cats.jpg'
 
-function categoria() {
+function Categoria() {
     return (
         <div>
-            <img src={Cate}/>
+            <img src={Cate} alt = "Categoria"/>
            
         </div>
     )
 }
 
-export default categoria
+export default Categoria
