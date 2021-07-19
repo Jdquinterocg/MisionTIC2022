@@ -1,6 +1,7 @@
 
 import React, { Component } from 'react';
 import uniqid from 'uniqid'
+import "./styles/Carrito.css";;
 
 
 class Carrito extends Component {
@@ -27,15 +28,19 @@ class Carrito extends Component {
         },
         }
 
+       
+    
+
+
     render() {
         const carrito = this.state.data.productos;
         return (
-            <div>
+            <div className="carrito">
                 <div className="container">
                 <div className="text-center">
-                <h2>Carrito de Compras</h2>
-                <br />
-                    <div class="row">
+                <h2 className="title">Carrito de Compras</h2>
+                <div className="tabla">
+                    <div class="row align-items-center">
                     <div class="col"> 
                     <strong>Producto</strong> 
                     </div>
@@ -50,7 +55,7 @@ class Carrito extends Component {
                     </div>
                     </div> 
                     <hr />
-                </div>
+                
 
                 <ul className="list-unstyled">
                     {carrito.map((producto) => {
@@ -61,10 +66,10 @@ class Carrito extends Component {
                                 <div className="col">{producto.nombre}</div>
                                 <div className="col">${producto.precio}</div>
                                 <div className="col">
-                                    <button className="btn btn-light btn-sm">-</button> 
-                                    {producto.cantidad} 
+                                    <button className="btn btn-light btn-sm">-</button>
+                                    <div className="cantidad">{producto.cantidad}</div>
                                     <button className="btn btn-light btn-sm">+</button>
-                                </div>
+                                    </div>
                                 <div className="col">${producto.subtotal}</div>
                                 </div>
                                 </div>
@@ -72,11 +77,17 @@ class Carrito extends Component {
                                 )
                                     })}
                 </ul>
-        
-            <button class="btn btn-outline-info"> Seleccionar más productos </button>
-            <button class="btn btn-outline-danger float-end"> Caja registradora </button>
+                </div>
+                </div>
+                </div>
+                <div className="container">
+                    <button className="button"> Seleccionar más productos </button>
+                    <button className="button float-end"> Recoger en tienda </button>
+                    <button className="button float-end"> Pedir a domicilio </button>
                 </div>
             </div>
+        
+        
         );
     }
 }
