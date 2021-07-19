@@ -1,11 +1,12 @@
 import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
 import './styles/Register.css'
 
 class Register extends Component {
     render() {
         return (
-            <div className="form">
+            <div className="form mt-3 mb-3">
 
             <form className="form-container">
                 <div>
@@ -58,11 +59,13 @@ class Register extends Component {
                     />
                     </div>
 
-                    <button type="submit" className="btn btn-success">
-                    Registrarme
-                    </button>
+                    <Link to = "/">
+                        <button type="submit" className="btn btn-success">
+                            Registrarme
+                        </button>
+                    </Link>
 
-                    <a href="#" className="nav-link active mt-2">Ya tengo una cuenta</a>
+                    <Link to="/login" className="nav-link active mt-2">Ya tengo una cuenta</Link>
                 </div>
             </form>
         </div>

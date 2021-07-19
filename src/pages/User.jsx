@@ -49,7 +49,6 @@ class User extends React.Component {
         console.log(domicilios);
         return (
             <div className="Hero">
-                <Header />
 
                 <Usuario 
                     nombre={user.nombre}
@@ -60,8 +59,6 @@ class User extends React.Component {
                     />
 
                 <Pedidos domicilios={domicilios} />
-                    
-                <Footer />
             </div>
         )
     }

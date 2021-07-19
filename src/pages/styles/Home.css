@@ -14,7 +14,7 @@ main {
     max-width: 1200px;
     background: #FDFAF6;
 	/*height: 1800px;ACÁ AJUSTO LA ALTURA*/
-	height: calc(100vh + 50vh);
+	height: calc(100vh + 450px);
 	margin: 50px auto;
 	overflow: hidden; /*Lo que esté fuera del contenedor no se ve*/
 }

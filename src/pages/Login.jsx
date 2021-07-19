@@ -1,4 +1,5 @@
 import React, { Component } from "react";
+import { Link } from "react-router-dom";
 
 import './styles/Login.css'
 
@@ -32,12 +33,15 @@ class Login extends Component {
                         id="exampleInputPassword1"
                     />
                     </div>
+                    
+                    <Link to="/">
+                        <button type="submit" className="btn btn-success">
+                            Iniciar sesión
+                        </button>
+                    </Link>
 
-                    <button type="submit" className="btn btn-success">
-                    Iniciar sesión
-                    </button>
-
-                    <a href="#" className="nav-link active mt-2">Olvidé mi Contraseña</a>
+                    <Link to="/" className="nav-link active mt-2">Olvidé mi Contraseña </Link>
+                    <Link to="/register" className="nav-link active">No tengo una cuenta aún </Link>
                 </div>
             </form>
         </div>
