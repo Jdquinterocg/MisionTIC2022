@@ -1,0 +1,59 @@
+.Header {
+    width: 100%;
+    background-color: #064420;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    height: 80px;
+    font-size: 30px;
+}
+
+.Header-titulo {
+    font-family: 'Dancing Script', cursive;
+    margin-left: 20px;
+    font-size: 35px;
+}
+
+
+.header__menu--profile {
+    margin-right: 40px;
+    display: flex;
+    cursor: pointer; /*Pone la manito de que detecta un link*/
+}
+.header__menu--profile img{
+    margin-right: 15px;
+    height: 50px;
+}
+
+.header__menu--profile p{
+    margin-right: 20px;
+    color: white;
+}
+
+.header__menu:hover ul, ul:hover {
+    display: block;
+}
+
+.header__menu ul {
+    display: none;
+    list-style: none;
+    position: absolute;
+    width: 70px;
+    margin: 0px 0px 0px 0px;
+    text-align: end;
+    padding: 0px;
+}
+
+.header__menu li{
+    margin: 10px 0px;
+}
+
+.header__menu li a{
+    color: black;
+    text-decoration: none;
+}
+
+.header__menu li a:hover{
+    text-decoration: underline;
+}
