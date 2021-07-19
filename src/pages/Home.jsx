@@ -1,18 +1,16 @@
 import React from 'react';
-import {Slideshow, Slide, TextoSlide} from './componentes/Slideshow'
-import './estilos.css';
+import {Slideshow, Slide, TextoSlide} from '../components/Slideshow'
+import './styles/Home.css';
 import styled from 'styled-components';
-import img1 from './img/1.jpg';
-import img2 from './img/2.jpg';
-import img3 from './img/3.jpg';
-import img4 from './img/4.jpg';
-import Cards from '../componentes/Cards'
-import '../componentes/App.css'
-import Cats from '../componentes/categories'
-import categories from '../componentes/categories';
+import img1 from '../imagenes/img-home/1.jpg';
+import img2 from '../imagenes/img-home/2.jpg';
+import img3 from '../imagenes/img-home/3.jpg';
+import img4 from '../imagenes/img-home/4.jpg';
+import Cards from '../components/Cards'
+import Cats from '../components/Categoria'
 
 
-const App = () => {
+const Home = () => {
 	return (
 		<main>
 			
@@ -67,4 +65,4 @@ const Titulo = styled.p`
 	margin-bottom: 10px;
 `;
  
-export default App;
+export default Home;

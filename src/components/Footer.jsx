@@ -21,20 +21,20 @@ function Footer() {
           </div>
 
           <div>
-            <a href="" className="me-4 text-reset">
-              <img href='#' src={facebook} alt="Logo" className="fab fa-facebook-f mr-3" width="30" height="30"></img>
+            <a href="/" className="me-4 text-reset">
+              <img href='/' src={facebook} alt="Logo" className="fab fa-facebook-f mr-3" width="30" height="30"></img>
             </a>
-            <a href="" className="me-4 text-reset">
-              <img href='#' src={twitter} alt="Logo" className="fab fa-twitter mr-3" width="30" height="30"></img>
+            <a href="/" className="me-4 text-reset">
+              <img href='/' src={twitter} alt="Logo" className="fab fa-twitter mr-3" width="30" height="30"></img>
             </a>
-            <a href="" className="me-4 text-reset">
-              <img href='#' src={instagram} alt="Logo" className="fab fa-instagram mr-3" width="30" height="30"></img>
+            <a href="/" className="me-4 text-reset">
+              <img href='/' src={instagram} alt="Logo" className="fab fa-instagram mr-3" width="30" height="30"></img>
             </a>
-            <a href="" className="me-4 text-reset">
-              <img href='#' src={linkedin} alt="Logo" className="fab fa-linkedin mr-3" width="30" height="30"></img>
+            <a href="/" className="me-4 text-reset">
+              <img href='/' src={linkedin} alt="Logo" className="fab fa-linkedin mr-3" width="30" height="30"></img>
             </a>
-            <a href="" className="me-4 text-reset">
-              <img href='#' src={github} alt="Logo" className="fab fa-github mr-3" width="30" height="30"></img>
+            <a href="/" className="me-4 text-reset">
+              <img href='/' src={github} alt="Logo" className="fab fa-github mr-3" width="30" height="30"></img>
             </a>
           </div>
         </section>
@@ -62,16 +62,16 @@ function Footer() {
                         Categorías
                     </h6>
                     <p>
-                        <a href="#!" className="text-reset">Aseo</a>
+                        <a href="/" className="text-reset">Aseo</a>
                     </p>
                     <p>
-                        <a href="#!" className="text-reset">Frutas y Verduras</a>
+                        <a href="/" className="text-reset">Frutas y Verduras</a>
                     </p>
                     <p>
-                        <a href="#!" className="text-reset">Lacteos</a>
+                        <a href="/" className="text-reset">Lacteos</a>
                     </p>
                     <p>
-                        <a href="#!" className="text-reset">Varios</a>
+                        <a href="/" className="text-reset">Varios</a>
                     </p>
                 </div>
 

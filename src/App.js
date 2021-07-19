@@ -1,6 +1,4 @@
-import Login from './pages/Login';
-import Register from './pages/Register';
-import User from "./pages/User";
+import React from 'react';
 
 function App() {
   return (
@@ -11,4 +9,5 @@ function App() {
   );
 }
 
+ 
 export default App;
