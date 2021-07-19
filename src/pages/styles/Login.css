@@ -1,4 +1,4 @@
-.form {
+.form-login {
     width: 100%;
     min-height: calc(100vh);
     display: flex;
@@ -6,7 +6,7 @@
     align-items: center;
 }
 
-.form-container {
+.form-container-login {
     height: 300px;
     width: 300px;
     display: flex;

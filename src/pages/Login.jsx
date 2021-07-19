@@ -5,9 +5,9 @@ import './styles/Login.css'
 class Login extends Component {
   render() {
     return (
-        <div className="form">
+        <div className="form-login">
 
-            <form className="form-container">
+            <form className="form-container-login">
                 <div>
 
                     <div className="mb-3">
