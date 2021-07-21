@@ -7,7 +7,7 @@ import img2 from '../imagenes/img-home/2.jpg';
 import img3 from '../imagenes/img-home/3.jpg';
 import img4 from '../imagenes/img-home/4.jpg';
 import Cards from '../components/Cards'
-import Cats from '../components/Categoria'
+import Cats from '../components/categoria'
 
 
 const Home = () => {
