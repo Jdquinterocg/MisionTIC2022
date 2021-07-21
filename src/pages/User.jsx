@@ -1,10 +1,10 @@
 import React from 'react'
 import uniqid from 'uniqid'
 
-import Header from '../components/Header'
+// import Header from '../components/Header'
 import Usuario from '../components/Usuario'
 import Pedidos from '../components/Pedidos'
-import Footer from '../components/Footer'
+// import Footer from '../components/Footer'
 
 import './styles/User.css'
 
