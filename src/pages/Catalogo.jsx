@@ -9,23 +9,24 @@ import blanquillos from '../imagenes/catalogo/117.jpg'
 import salero from '../imagenes/catalogo/121.jpg'
 import aceite from '../imagenes/catalogo/124.jpg'
 import huevos from '../imagenes/catalogo/128.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
-// import arroz from '../imagenes/catalogo/101.jpg'
+import huevo from '../imagenes/catalogo/129.jpg'
+import leche from '../imagenes/catalogo/220.jpg'
+import queso from '../imagenes/catalogo/224.jpg'
+import papasMargarita from '../imagenes/catalogo/302.jpg'
+import papa2kg from '../imagenes/catalogo/401.jpg'
+import toamte from '../imagenes/catalogo/402.jpg'
+import cebolla from '../imagenes/catalogo/403.jpg'
+import limon from '../imagenes/catalogo/404.jpg'
+import platanoMaduro from '../imagenes/catalogo/408.jpg'
+import agua from '../imagenes/catalogo/502.jpg'
+import gaseosaManzana from '../imagenes/catalogo/508.jpg'
+import salchicha from '../imagenes/catalogo/601.jpg'
+import paletaUva from '../imagenes/catalogo/701.jpg'
+import heladoLulo from '../imagenes/catalogo/713.jpg'
+import cepillo from '../imagenes/catalogo/801.jpg'
+import escoba from '../imagenes/catalogo/809.jpg'
+import trapeador from '../imagenes/catalogo/810.jpg'
+import jabon from '../imagenes/catalogo/817.jpg'
 
 class Catalogo extends Component {
   state = {
@@ -93,126 +94,126 @@ class Catalogo extends Component {
         categoria: "varios",
         descripcion: "Huevo 1und",
         precio: 600,
-        imagen: "../imagenes/catalogo/129.jpg",
+        imagen: huevo,
       },
       {
         id: uniqid(),
         categoria: "varios",
         descripcion: "Papas Margarita Natural 120g",
         precio: 4500,
-        imagen: "../imagenes/catalogo/302.jpg",
+        imagen: papasMargarita,
       },
       {
         id: uniqid(),
         categoria: "varios",
         descripcion: "Botella Agua Brisa 600cc",
         precio: 1500,
-        imagen: "../imagenes/catalogo/502.jpg",
+        imagen: agua,
       },
       {
         id: uniqid(),
         categoria: "varios",
         descripcion: "Gaseosa Postobon Manzana 1500cc",
         precio: 3000,
-        imagen: "../imagenes/catalogo/508.jpg",
+        imagen: gaseosaManzana,
       },
       {
         id: uniqid(),
         categoria: "varios",
         descripcion: "Salchicha Rica 500g",
         precio: 5500,
-        imagen: "../imagenes/catalogo/601.jpg",
+        imagen: salchicha,
       },
       {
         id: uniqid(),
         categoria: "varios",
         descripcion: "Paleta Uva",
         precio: 1500,
-        imagen: "../imagenes/catalogo/701.jpg",
+        imagen: paletaUva,
       },
       {
         id: uniqid(),
         categoria: "varios",
         descripcion: "Helado Lulo",
         precio: 3000,
-        imagen: "../imagenes/catalogo/713.jpg",
+        imagen: heladoLulo,
       },
       {
         id: uniqid(),
         categoria: "lacteos",
         descripcion: "Leche Alqueria Deslactosada 1100cc",
         precio: 3800,
-        imagen: "../imagenes/catalogo/220.jpg",
+        imagen: leche,
       },
       {
         id: uniqid(),
         categoria: "lacteos",
         descripcion: "Queso Cuajada 500g",
         precio: 4500,
-        imagen: "../imagenes/catalogo/224.jpg",
+        imagen: queso,
       },
       {
         id: uniqid(),
         categoria: "frutasyverduras",
         descripcion: "Papa 2000g",
         precio: 9000,
-        imagen: "../imagenes/catalogo/401.jpg",
+        imagen: papa2kg,
       },
       {
         id: uniqid(),
         categoria: "frutasyverduras",
         descripcion: "Tomate 1000g",
         precio: 3500,
-        imagen: "../imagenes/catalogo/402.jpg",
+        imagen: toamte,
       },
       {
         id: uniqid(),
         categoria: "frutasyverduras",
         descripcion: "Cebolla 500g",
         precio: 3000,
-        imagen: "../imagenes/catalogo/403.jpg",
+        imagen: cebolla,
       },
       {
         id: uniqid(),
         categoria: "frutasyverduras",
         descripcion: "Limon 1000g",
         precio: 3900,
-        imagen: "../imagenes/catalogo/404.jpg",
+        imagen: limon,
       },
       {
         id: uniqid(),
         categoria: "frutasyverduras",
         descripcion: "Platano Maduro 1000g",
         precio: 2500,
-        imagen: "../imagenes/catalogo/408.jpg",
+        imagen: platanoMaduro,
       },
       {
         id: uniqid(),
         categoria: "aseo",
         descripcion: "Cepillo Dental Colgate",
         precio: 4000,
-        imagen: "../imagenes/catalogo/801.jpg",
+        imagen: cepillo,
       },
       {
         id: uniqid(),
         categoria: "aseo",
         descripcion: "Escoba",
         precio: 10000,
-        imagen: "../imagenes/catalogo/809.jpg",
+        imagen: escoba,
       },
       {
         id: uniqid(),
         categoria: "aseo",
         descripcion: "Trapeador 250g",
         precio: 9500,
-        imagen: "../imagenes/catalogo/810.jpg",
+        imagen: trapeador,
       },
       {
         id: uniqid(),
         categoria: "aseo",
         descripcion: "Jabon Johnson Avena 110g",
         precio: 1500,
-        imagen: "../imagenes/catalogo/817.jpg",
+        imagen: jabon,
       },
     ],
     }
