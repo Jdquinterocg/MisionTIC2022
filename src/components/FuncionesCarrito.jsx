@@ -2,6 +2,7 @@ import React from 'react'
 import "./styles/Carrito.css";
 import { Link } from "react-router-dom";
 
+// parámetro -> total
 function FuncionesCarrito(props) {
     const carrito = props.carro
 
@@ -54,17 +55,9 @@ function FuncionesCarrito(props) {
                                     })}
                 </ul>
 
-                {carrito.map((producto) => {
-                    let subtotales = producto.cantidad*producto.precio
-                    let Total = subtotales
-                    
-                    return (
-                        <div className="col">${Total}</div>   
-                            )
-                            })}
-
-                <div class="row justify-content-end">         
-                <div className="col-6 fs-5"> <strong>Total = </strong> $3000</div>
+                <div class="row justify-content-end">
+                    {/* parámetro -> total          */}
+                <div className="col-6 fs-5"> <strong>Total = </strong> ${props.total}</div>
                 </div>
                 </div>
                 </div>
