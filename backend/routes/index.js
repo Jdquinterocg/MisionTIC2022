@@ -9,7 +9,7 @@ const Domicilios = require('../models/domicilios');
 // User
 
 router.get('/domicilios', async (req, res, next) => {
-    await User.find((err, data) => {
+    await User.find({}, (err, data) => {
         if (err) {
             console.log(`Sorry, I can't do this: ${err.message}`);
             return next(err);

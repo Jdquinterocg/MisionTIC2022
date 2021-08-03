@@ -3,15 +3,16 @@ const express = require('express');
 const mongoose = require('mongoose')
 const morgan = require('morgan');
 
-const app = express();
 
 // Connecting to db
 mongoose.connect('mongodb://localhost:27017/tienda', { useNewUrlParser: true, useUnifiedTopology: true })
-    .then(db => console.log('Db connected successfully'))
-    .catch(err => console.log(err));
+.then(db => console.log('Db connected successfully'))
+.catch(err => console.log(err));
 
 // Importing routes
 const routes = require('./routes/index');
+
+const app = express();
 
 // Middleware
 app.use(morgan('dev')); //Message in the console that tell us the petition our app

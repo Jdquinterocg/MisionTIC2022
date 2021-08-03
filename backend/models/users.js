@@ -1,8 +1,7 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const Domicilios = mongoose.model('Domicilios');
 
-const UserSchema = Schema ({
+const userSchema = Schema ({
     name: String,
     apellido: String,
     direccion: String,
@@ -11,10 +10,11 @@ const UserSchema = Schema ({
         type: Boolean,
         default: false
     },
-    domicilios: [{ // It Allow us to establish a relationship between user and deliveries databases
+    // It Allow us to establish a relationship between user and deliveries databases
+    domicilios: [{
         type: Schema.ObjectId, 
-        ref: `${Domicilios}`
+        ref: 'domicilios'
     }]
 });
 
-module.exports = mongoose.model('Users', UserSchema);
+module.exports = mongoose.model('Users', userSchema);
