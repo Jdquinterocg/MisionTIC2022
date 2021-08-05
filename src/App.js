@@ -4,7 +4,6 @@ import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import Home from './pages/Home';
 import Login from './pages/Login';
 import Register from './pages/Register';
-import Catalogo from './pages/Catalogo';
 import Carrito from './pages/Carrito';
 import User from './pages/User';
 
