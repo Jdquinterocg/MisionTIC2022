@@ -13,7 +13,7 @@ class CajaRecoge extends Component {
           <div className="row">
             <h3>En unos minutos recibirá su pedido</h3>
           </div>
-          <Link to="/">
+          <Link to="compras">
             <button className="button m-1"> Cerrar </button>
           </Link>
         </div>

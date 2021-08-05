@@ -16,7 +16,7 @@ class CajaRecoge extends Component {
           <Link to="/confirmaRecoge">
             <button className="buttonConfirmar m-1"> Confirmar pedido </button>
           </Link>
-          <Link to="/">
+          <Link to="compras">
             <button className="button m-1"> Volver </button>
           </Link>
         </form>
