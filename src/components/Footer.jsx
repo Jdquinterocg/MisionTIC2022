@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 import './styles/Footer.css'
 
@@ -21,21 +22,21 @@ function Footer() {
           </div>
 
           <div>
-            <a href="/" className="me-4 text-reset">
-              <img href='/' src={facebook} alt="Logo" className="fab fa-facebook-f mr-3" width="30" height="30"></img>
-            </a>
-            <a href="/" className="me-4 text-reset">
-              <img href='/' src={twitter} alt="Logo" className="fab fa-twitter mr-3" width="30" height="30"></img>
-            </a>
-            <a href="/" className="me-4 text-reset">
-              <img href='/' src={instagram} alt="Logo" className="fab fa-instagram mr-3" width="30" height="30"></img>
-            </a>
-            <a href="/" className="me-4 text-reset">
-              <img href='/' src={linkedin} alt="Logo" className="fab fa-linkedin mr-3" width="30" height="30"></img>
-            </a>
-            <a href="/" className="me-4 text-reset">
-              <img href='/' src={github} alt="Logo" className="fab fa-github mr-3" width="30" height="30"></img>
-            </a>
+            <Link to="/" className="me-4 text-reset">
+              <img to='/' src={facebook} alt="Logo" className="fab fa-facebook-f mr-3" width="30" height="30"></img>
+            </Link>
+            <Link to="/" className="me-4 text-reset">
+              <img to='/' src={twitter} alt="Logo" className="fab fa-twitter mr-3" width="30" height="30"></img>
+            </Link>
+            <Link to="/" className="me-4 text-reset">
+              <img to='/' src={instagram} alt="Logo" className="fab fa-instagram mr-3" width="30" height="30"></img>
+            </Link>
+            <Link to="/" className="me-4 text-reset">
+              <img to='/' src={linkedin} alt="Logo" className="fab fa-linkedin mr-3" width="30" height="30"></img>
+            </Link>
+            <Link to="/" className="me-4 text-reset">
+              <img to='/' src={github} alt="Logo" className="fab fa-github mr-3" width="30" height="30"></img>
+            </Link>
           </div>
         </section>
         
@@ -62,16 +63,16 @@ function Footer() {
                         Categorías
                     </h6>
                     <p>
-                        <a href="/" className="text-reset">Aseo</a>
+                        <Link to="/" className="text-reset">Aseo</Link>
                     </p>
                     <p>
-                        <a href="/" className="text-reset">Frutas y Verduras</a>
+                        <Link to="/" className="text-reset">Frutas y Verduras</Link>
                     </p>
                     <p>
-                        <a href="/" className="text-reset">Lacteos</a>
+                        <Link to="/" className="text-reset">Lacteos</Link>
                     </p>
                     <p>
-                        <a href="/" className="text-reset">Varios</a>
+                        <Link to="/" className="text-reset">Varios</Link>
                     </p>
                 </div>
 

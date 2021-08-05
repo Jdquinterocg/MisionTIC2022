@@ -21,9 +21,9 @@ class Pedidos extends React.Component {
                                 
                                 <div className="container">
                                     <ul className="list-unstyled">
-                                        {entregas.map((entrega) => {
+                                        {entregas.map((entrega, id) => {
                                             return (
-                                                <li className="pedido mb-5" key={entrega.id}>
+                                                <li className="pedido mb-5" key={id}>
                                                     <div className="row">
                                                         <div className="col-4 horario">
                                                             <strong>Fecha: </strong> {entrega.fecha}
@@ -34,9 +34,9 @@ class Pedidos extends React.Component {
                                                             <strong>Valor Total: </strong> ${entrega.valor}
                                                             <br />
                                                             <ul className="list-group">
-                                                                <strong>Productos: </strong> {entrega.productos.map((producto) => {
+                                                                <strong>Productos: </strong> {entrega.productos.map((producto, id) => {
                                                                     return (
-                                                                        <p className="list-group-item pedido-producto" key={producto.id}>
+                                                                        <p className="list-group-item pedido-producto" key={id}>
                                                                             {producto.name}
                                                                         </p>)
                                                                 })}

@@ -8,8 +8,8 @@ function Header() {
     <header className="Header">
       <h1 className="Header-titulo">Tienda Doña Paquita</h1>
 
-      <div class="header__menu">
-        <div class="header__menu--profile">
+      <div className="header__menu">
+        <div className="header__menu--profile">
           <img src={user} alt="User" />
           <p>Perfil</p>
         </div>
