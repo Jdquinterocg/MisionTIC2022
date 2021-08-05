@@ -9,11 +9,9 @@ import img4 from '../imagenes/img-home/4.jpg';
 import Cards from '../components/Cards'
 import Cats from '../components/Categoria'
 
-
 const Home = () => {
 	return (
 		<main>
-			
 			<Titulo>Buenas veci, ¿En qué podemos colaborarle?</Titulo>
 			<Slideshow controles={true} autoplay={true} velocidad="3000" intervalo="5000">
 				<Slide>
@@ -51,9 +49,6 @@ const Home = () => {
 			</Slideshow>
 			<Cats />
 			<Cards />
-			
-
-			
 		</main>
 	);
 }

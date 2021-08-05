@@ -50,8 +50,7 @@ function Footer() {
                         Tienda doña Paquita
                     </h6>
                     <p>
-                        Estamos en la lucha de la inclusión e igualdad de oportunidades, por este motivo conectamos
-                        tiendas de barrio con futuros clientes.
+                        Estamos en la lucha de la inclusión e igualdad de oportunidades, por este motivo conectamos tiendas de barrio con futuros clientes.
                     </p>
                 </div>
                 

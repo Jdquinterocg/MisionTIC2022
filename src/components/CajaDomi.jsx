@@ -31,7 +31,7 @@ class CajaDomi extends Component {
           <Link to="/confirmaDomicilio">
             <button className="buttonConfirmar m-1"> Confirmar pedido </button>
           </Link>
-          <Link to="/">
+          <Link to="compras">
             <button className="button m-1"> Volver </button>
           </Link>
         </form>
