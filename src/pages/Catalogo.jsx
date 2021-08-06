@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import uniqid from 'uniqid';
-
+import "./styles/Catalogo.css";
 import arroz from '../imagenes/catalogo/101.jpg'
 import lentejas from '../imagenes/catalogo/111.jpg'
 import frijoles from '../imagenes/catalogo/113.jpg'
@@ -93,7 +93,7 @@ class Catalogo extends Component {
         id: uniqid(),
         categoria: "varios",
         descripcion: "Huevo 1und",
-        precio: 600,
+        precio: 400,
         imagen: huevo,
       },
       {
@@ -211,7 +211,7 @@ class Catalogo extends Component {
       {
         id: uniqid(),
         categoria: "aseo",
-        descripcion: "Jabon Johnson Avena 110g",
+        descripcion: "Jabón Johnson Avena 110g",
         precio: 1500,
         imagen: jabon,
       },
@@ -221,30 +221,36 @@ class Catalogo extends Component {
 
   render() {
     const productos = this.state.data.productos;
+    // catogorías
+    const aseo = productos.filter(cat => cat.categoria === "aseo");
+    const lacteos = productos.filter(cat => cat.categoria === "lacteos");
+    const fruver = productos.filter(cat => cat.categoria === "frutasyverduras");
+    const varios = productos.filter(cat => cat.categoria === "varios");
     return (
       <div className="catalogo">
         <div className="container">
+        <h2 className="title">Productos</h2>
           <div className="row">
-            <div className="col-3">
-              <ul className="list-unstyled">
-                <li>Aseo</li>
-                <li>Lacteos</li>
-                <li>Frutas y verduras</li>
-                <li>Varios</li>
+            <div className="col-2">
+              <ul className="list-group">
+                <li className="list-group-item list-group-item-action">Aseo</li>
+                <li className="list-group-item list-group-item-action">Lácteos</li>
+                <li className="list-group-item list-group-item-action">Frutas y verduras</li>
+                <li className="list-group-item list-group-item-action">Varios</li>
               </ul>
             </div>
-
-            <div className="col-9">
+            <div className="col-2"></div>
+            <div className="col-6">
               <ul className="list-unstyled">
                   {productos.map(producto => {
                       return (
-                        <li className="mb-5" key={producto.id}>
-                            <div className="row">
-                                <div className="col">
+                        <li className="container m-3" key={producto.id}>
+                            <div className="row tabla align-items-center">
+                                <div className="col-4 text-center">
                                     <img src={`${producto.imagen}`} alt={producto.descripcion} />
                                 </div>
                                 <div className="col">
-                                    <h6>Descripción: {producto.descripcion}</h6>
+                                    <h6> {producto.descripcion}</h6>
                                     <p>Precio: ${producto.precio}</p>
                                     <p>Categoría: {producto.categoria}</p>
                                     <button className="btn btn-success">Añadir al carrito</button>
@@ -255,6 +261,7 @@ class Catalogo extends Component {
                   })}
               </ul>
             </div>
+
           </div>
         </div>
       </div>

@@ -9,7 +9,7 @@ function Card({title, imageSource, desc}) {
                 <img src={imageSource} alt="" className="card-img-top"/>
             </div>
             <div className="card-body">
-                <a href="#!" className="btn btn-success btn-block">{title}</a>
+                <a href="productos" className="btn btn-success btn-block">{title}</a>
                 <p className="card-text text-secondary">{desc}</p>
                 
             </div>

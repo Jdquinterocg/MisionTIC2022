@@ -6,24 +6,24 @@
     align-items: center;
     color: white;
     height: 80px;
-    font-size: 30px;
+    font-size: 24px;
 }
 
 .Header-titulo {
     font-family: 'Dancing Script', cursive;
     margin-left: 20px;
-    font-size: 35px;
+    font-size: 36px;
 }
 
 
 .header__menu--profile {
-    margin-right: 40px;
+    margin-right: 10px;
     display: flex;
     cursor: pointer; /*Pone la manito de que detecta un link*/
 }
 .header__menu--profile img{
     margin-right: 15px;
-    height: 50px;
+    height: 60px;
 }
 
 .header__menu--profile p{
@@ -39,7 +39,7 @@
     display: none;
     list-style: none;
     position: absolute;
-    width: 70px;
+    width: 100px;
     margin: 0px 0px 0px 0px;
     text-align: end;
     padding: 0px;
