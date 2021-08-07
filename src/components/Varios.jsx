@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import uniqid from 'uniqid';
 import "./styles/Catalogo.css";
+
 import arroz from '../imagenes/catalogo/101.jpg'
 import lentejas from '../imagenes/catalogo/111.jpg'
 import frijoles from '../imagenes/catalogo/113.jpg'
@@ -28,7 +29,7 @@ import escoba from '../imagenes/catalogo/809.jpg'
 import trapeador from '../imagenes/catalogo/810.jpg'
 import jabon from '../imagenes/catalogo/817.jpg'
 
-class Catalogo extends Component {
+class Varios extends Component {
   state = {
     data:{
 
@@ -221,28 +222,25 @@ class Catalogo extends Component {
 
   render() {
     const productos = this.state.data.productos;
-    // catogorías
-    const aseo = productos.filter(cat => cat.categoria === "aseo");
-    const lacteos = productos.filter(cat => cat.categoria === "lacteos");
-    const fruver = productos.filter(cat => cat.categoria === "frutasyverduras");
     const varios = productos.filter(cat => cat.categoria === "varios");
-    return (
-      <div className="catalogo">
+       return (
+        <div className="catalogo">
         <div className="container">
         <h2 className="title">Productos</h2>
           <div className="row">
-            <div className="col-2">
+            <div className="col-2 categorias">
               <ul className="list-group">
-                <li className="list-group-item list-group-item-action">Aseo</li>
-                <li className="list-group-item list-group-item-action">Lácteos</li>
-                <li className="list-group-item list-group-item-action">Frutas y verduras</li>
-                <li className="list-group-item list-group-item-action">Varios</li>
-              </ul>
+                <li className="list-group-item text-center"> <strong>Categorías</strong></li>
+              <li className="list-group-item list-group-item-action"> <a href="aseo">Aseo</a></li>
+                <li className="list-group-item list-group-item-action"> <a href="lacteos">Lácteos</a></li>
+                <li className="list-group-item list-group-item-action"> <a href="fruver">Frutas y verduras</a></li>
+                <li className="list-group-item list-group-item-action"> <a href="varios">Varios</a></li>
+                </ul>
             </div>
             <div className="col-2"></div>
             <div className="col-6">
               <ul className="list-unstyled">
-                  {productos.map(producto => {
+                  {varios.map(producto => {
                       return (
                         <li className="container m-3" key={producto.id}>
                             <div className="row tabla align-items-center">
@@ -266,7 +264,8 @@ class Catalogo extends Component {
         </div>
       </div>
     );
+  
   }
 }
 
-export default Catalogo;
+export default Varios;

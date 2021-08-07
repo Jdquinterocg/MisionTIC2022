@@ -1,10 +1,11 @@
 .catalogo {
     background-color: #FDFAF6;
     /* centrado absoluto: */
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100vh; */
+    padding: 15px;
     }
 
 .title {
@@ -17,10 +18,18 @@
         padding: 15px;
         }
 
-        .imagen {
-            width: 20;
-            height: 20;
-          }
+        .categorias {
+            color:#064420;
+            text-decoration: none;
+        }
+        .categorias a{
+            color:#064420;
+            text-decoration: none;
+        }
+        .categorias a:hover{
+            color:#064420;
+            text-decoration: underline;
+        }
 
 .cantidad {
     background-color: #FDFAF6;

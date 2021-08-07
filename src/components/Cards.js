@@ -13,26 +13,30 @@ const cards = [
         id: 1,
         title:'Aseo',
         image: Aseo,
-        desc: "Productos de aseo"
+        desc: "Productos de aseo",
+        enlace:"aseo",
 
     },
     {
         id:2,
         title:'Frutas',
         image: Frutas,
-        desc: "Frutas y verduras"
+        desc: "Frutas y verduras",
+        enlace:"fruver",
     },
     {
         id:3,
         title:'Lacteos',
         image: Lacteos,
-        desc: "Leche, queso y mantequilla"
+        desc: "Leche, queso y mantequilla",
+        enlace:"lacteos",
     },
     {
         id:4,
         title:'Varios',
         image: Varios,
-        desc: "Productos varios"
+        desc: "Productos varios",
+        enlace:"varios",
     }
 ]
 
@@ -43,7 +47,7 @@ function Cards() {
                 {
                     cards.map(card =>(
                         <div className="col-md-3" key={card.id}>
-                            <Card title={card.title} imageSource={card.image} desc={card.desc}/>
+                            <Card title={card.title} imageSource={card.image} desc={card.desc} enlace={card.enlace}/>
                             
                         </div>
                     ))

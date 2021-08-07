@@ -1,10 +1,11 @@
 .carrito {
     background-color: #FDFAF6;
+    padding: 15px;
     /* centrado absoluto: */
-    display: flex;
+    /* display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 100vh;
+    min-height: 100vh; */
     }
 
 .title {
