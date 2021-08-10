@@ -7,17 +7,20 @@ import github from '../imagenes/redes/github.png'
 import twitter from '../imagenes/redes/twitter.png'
 import linkedin from '../imagenes/redes/linkedin.png'
 import instagram from '../imagenes/redes/instagram.png'
+import MinTIC from '../imagenes/MinTIC.png'
+import Mision from '../imagenes/MisionTIC.png'
+import UTP from '../imagenes/UTP.png'
 
 function Footer() {
   return (
     <div>
-      <footer className="Footer text-center text-lg-start">
+      <footer className="Footer text-center">
 
         {/* Social media */}
         <section className="d-flex justify-content-center justify-content-lg-between p-4 border-bottom">
           
           <div className="me-5 d-none d-lg-block">
-            <span>Conectate con nosotros por nuestras redes sociales:</span>
+            <span>Conéctese con nosotros a través de nuestras redes sociales:</span>
           </div>
 
           <div>
@@ -40,51 +43,40 @@ function Footer() {
         </section>
         
     <section>
-        
-        <div className="container text-center text-md-start mt-5">
-            <div className="row mt-3">
+        <div className="container text-center text-md-start mt-4">
+            <div className="row">
                 
                 {/* Empresa */}
-                <div className="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
-                    <h6 className="text-uppercase fw-bold mb-4">
+                <div className="col-3">
+                    <h6 className="text-uppercase fw-bold mb-3">
                         Tienda doña Paquita
                     </h6>
                     <p>
-                        Estamos en la lucha de la inclusión e igualdad de oportunidades, por este motivo conectamos
-                        tiendas de barrio con futuros clientes.
-                    </p>
-                </div>
-                
-                {/* Categorías */}
-                <div className="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
-                
-                    <h6 className="text-uppercase fw-bold mb-4">
-                        Categorías
-                    </h6>
-                    <p>
-                        <a href="/" className="text-reset">Aseo</a>
-                    </p>
-                    <p>
-                        <a href="/" className="text-reset">Frutas y Verduras</a>
-                    </p>
-                    <p>
-                        <a href="/" className="text-reset">Lacteos</a>
-                    </p>
-                    <p>
-                        <a href="/" className="text-reset">Varios</a>
+                        Facilitamos la conexión de las tiendas de barrio con sus clientes
                     </p>
                 </div>
 
-                <div className="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
-                
-                    <div className="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
-                        <h6 className="text-uppercase fw-bold mb-4">
-                            Contact
+                {/* Contacto */}
+                    <div className="col">
+                        <h6 className="text-uppercase fw-bold mb-3">
+                            Contacto
                         </h6>
-                        <p>Colombia</p>
-                        <p>info@example.com</p>
-                        <p>3043861159</p>
+                        <p> Dirección: Colombia</p>
+                        <p> Correo electrónico: info@paquita.com</p>
+                        <p> Teléfono: 304 386 1159</p>
                     </div>
+                
+
+                {/* Desarrolladores */}
+                <div className="col-4 text-end align-items-end">
+                  <p> 
+                    <br /> 
+                    <br /> 
+                    <br />
+                  </p>
+                  <img src={MinTIC} alt="Logo"></img>
+                  <img src={Mision} alt="Logo" ></img>
+                  <img src={UTP} alt="Logo"></img>
                 </div>
             </div>
         </div>

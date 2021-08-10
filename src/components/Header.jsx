@@ -11,14 +11,15 @@ function Header() {
         <img src={logo} alt="Logo" />
       <h6 className="header-link"><a href="/">Inicio</a></h6>
       </div>
-      <h1 className="Header-titulo">Tienda Doña Paquita</h1>
-      <div className="col text-center">
+      <div className="col-9 text-center">
+      <h1 className="Header-titulo">Tienda Doña Paquita</h1></div>
+      <div className="col- text-center">
       <img src={carrito} alt="Carrito" />
       <h6 className="header-link"><a href="/compras">Carrito</a></h6>
       </div>
       <div className="header__menu">
         <div className="header__menu--profile">
-        <div className="col text-center">
+        <div className="col-1 text-center">
           <img src={user} alt="User" />
           <h6 className="header-link"><a href="/domicilios">Usuario</a></h6>
           </div>
