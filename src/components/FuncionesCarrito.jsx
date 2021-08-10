@@ -61,7 +61,13 @@ function FuncionesCarrito(props) {
                 </div>
                 </div>
                 </div>
+<<<<<<< HEAD
                     <button className="button m-1"> Seleccionar más productos </button>
+=======
+                    <Link to="/">
+                    <button className="button m-1"> Seleccionar más productos </button>
+                    </Link>
+>>>>>>> 5d3777f9d3da07bbb2c27c5f79df3cf5ceb34fae
                     <Link to="/recoge">
                     <button className="button float-end m-1"> Recoger en tienda </button>
                     </Link>

@@ -6,6 +6,14 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Carrito from './pages/Carrito';
 import User from './pages/User';
+import CajaDomi from './components/CajaDomi';
+import CajaRecoge from './components/CajaRecoge';
+import ConfirmaRecogida from './components/ConfirmaRecogida';
+import ConfirmaDomicilio from './components/ConfirmaDomicilio';
+import Aseo from './components/Aseo';
+import Lacteos from './components/Lacteos';
+import Fruver from './components/Fruver';
+import Varios from './components/Varios';
 
 import CajaDomi from './components/CajaDomi';
 import CajaRecoge from './components/CajaRecoge';
@@ -28,6 +36,10 @@ function App() {
             <Route exact path="/recoge" component={CajaRecoge}/>
             <Route exact path="/confirmaRecoge" component={ConfirmaRecogida}/>
             <Route exact path="/confirmaDomicilio" component={ConfirmaDomicilio}/>
+            <Route exact path="/aseo" component={Aseo}/>
+            <Route exact path="/lacteos" component={Lacteos}/>
+            <Route exact path="/fruver" component={Fruver}/>
+            <Route exact path="/varios" component={Varios}/>
           </Switch>
         </Layout>
       </BrowserRouter>
