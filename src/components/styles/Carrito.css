@@ -1,19 +1,6 @@
 .carrito {
     background-color: #FDFAF6;
-<<<<<<< HEAD
-    /* centrado absoluto: */
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh;
-=======
     padding: 15px;
-    /* centrado absoluto: */
-    /* display: flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 100vh; */
->>>>>>> 5d3777f9d3da07bbb2c27c5f79df3cf5ceb34fae
     }
 
 .title {

@@ -1,5 +1,5 @@
 import React from 'react'
-import Cate from '../imagenes/img-home/cats.jpg'
+import Cate from '../../imagenes/img-home/cats.jpg'
 
 function Categoria() {
     return (

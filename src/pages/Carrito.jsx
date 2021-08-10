@@ -1,7 +1,6 @@
-
 import React, { Component } from 'react';
 import uniqid from 'uniqid';
-import FuncionesCarrito from '../components/FuncionesCarrito';
+import FuncionesCarrito from '../components/carrito/FuncionesCarrito';
 
 class Carrito extends Component {
 

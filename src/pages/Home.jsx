@@ -1,13 +1,13 @@
 import React from 'react';
-import {Slideshow, Slide, TextoSlide} from '../components/Slideshow'
+import {Slideshow, Slide, TextoSlide} from '../components/home/Slideshow'
 import './styles/Home.css';
 import styled from 'styled-components';
 import img1 from '../imagenes/img-home/1.jpg';
 import img2 from '../imagenes/img-home/2.jpg';
 import img3 from '../imagenes/img-home/3.jpg';
 import img4 from '../imagenes/img-home/4.jpg';
-import Cards from '../components/Cards'
-import Cats from '../components/categoria'
+import Cards from '../components/home/Cards'
+import Cats from '../components/home/categoria'
 
 const Home = () => {
 	return (

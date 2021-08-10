@@ -1,8 +1,8 @@
 import React from 'react'
 import axios from 'axios';
 
-import Usuario from '../components/Usuario'
-import Pedidos from '../components/Pedidos'
+import Usuario from '../components/info/Usuario'
+import Pedidos from '../components/info/Pedidos'
 
 import './styles/User.css'
 

@@ -1,7 +1,7 @@
 import React from 'react';
 
-import './styles/Pedidos.css'
-import domicilio from '../imagenes/domicilio.jpg'
+import '../styles/Pedidos.css'
+import domicilio from '../../imagenes/domicilio.jpg'
 
 class Pedidos extends React.Component {
     render() {

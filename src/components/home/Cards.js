@@ -1,12 +1,12 @@
 import React from 'react'
 import Card from './Card'
 
-import Aseo from '../imagenes/categorias-home/Aseo.jpg'
-import Frutas from '../imagenes/categorias-home/Frutas.jpg'
-import Lacteos from '../imagenes/categorias-home/Lacteos.jpg'
-import Varios from '../imagenes/categorias-home/Varios.jpg'
+import Aseo from '../../imagenes/categorias-home/Aseo.jpg'
+import Frutas from '../../imagenes/categorias-home/Frutas.jpg'
+import Lacteos from '../../imagenes/categorias-home/Lacteos.jpg'
+import Varios from '../../imagenes/categorias-home/Varios.jpg'
 
-import './styles/Cards.css'
+import '../styles/Cards.css'
 
 const cards = [
     {

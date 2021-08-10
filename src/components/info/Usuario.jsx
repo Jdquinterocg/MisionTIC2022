@@ -1,7 +1,7 @@
 import React from 'react'
 
-import './styles/Usuario.css'
-import perfil from '../imagenes/Foto.jpeg'
+import '../styles/Usuario.css'
+import perfil from '../../imagenes/Foto.jpeg'
 
 class Usuario extends React.Component {
     render(){
@@ -22,7 +22,7 @@ class Usuario extends React.Component {
                                         <div className="container">
                                             <div className="row general">
                                                 <div className="col-6 info">
-                                                    <p> <strong>Nombre: </strong> {usuario.nombre} {usuario.apellido} </p>
+                                                    <p> <strong>Nombre: </strong> {usuario.nombre} </p>
                                                     <br />
                                                     <p> <strong>Cédula: </strong> {usuario.cedula} </p>
                                                 </div>

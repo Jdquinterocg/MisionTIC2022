@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 import { Link } from "react-router-dom";
-import "./styles/Carrito.css";
+import "../styles/Carrito.css";
 
 class CajaRecoge extends Component {
   render() {

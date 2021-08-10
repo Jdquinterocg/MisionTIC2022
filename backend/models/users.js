@@ -1,10 +1,9 @@
 const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
-const domicilios = require('./domicilios');
 
 const userSchema = Schema ({
     nombre: String,
-    apellido: String,
+    email: String,
     direccion: String,
     cedula: Number,
     telefono: Number,
@@ -12,6 +11,7 @@ const userSchema = Schema ({
         type: Boolean,
         default: false
     },
+    password: String,
     // It Allow us to establish a relationship between user and deliveries databases
     // domicilios: [{
     //     type: Schema.Types.ObjectId, 
