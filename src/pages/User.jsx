@@ -15,14 +15,14 @@ class User extends React.Component {
         }
         
             componentDidMount() {
-                axios.get('http://localhost:4000/usuario/')
+                axios.get('http://localhost:5000/usuario/')
                     .then((response) => this.setState({
                             usuario: response.data,
                     }))
                     // .then(res => console.log('Response axios users:' + res.data))
                     .catch(err => console.log('Error in axios: ' + err.message));
                 
-                axios.get('http://localhost:4000/domicilios/')
+                axios.get('http://localhost:5000/domicilios/')
                     .then((response) => this.setState({
                             domicilio: response.data
                     }))

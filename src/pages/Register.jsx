@@ -1,17 +1,36 @@
 import React, { Component } from "react";
-import { Link } from "react-router-dom";
+import { Link, withRouter } from "react-router-dom";
+import PropTypes from "prop-types"; // Library that checks the types that pass through the props
+import { connect } from "react-redux"; // Read the localStorage values
+import { registerUser } from "../actions/authActions";
+import classnames from "classnames"; //Conditional class
 import "./styles/Register.css";
 
 class Register extends Component {
   constructor() {
     super();
     this.state = {
-      nombre: "",
+      name: "",
       email: "",
       password: "",
       password2: "",
       errors: {},
     };
+  }
+
+  componentDidMount() {
+    // If logged in and user navigates to Register page, should redirect them to dashboard
+    if (this.props.auth.isAuthenticated) {
+      this.props.history.push("/");
+    }
+  }
+
+  // Anticipate the props to be passed to the component
+  componentWillReceiveProps(nextProps) {
+    console.log(nextProps);
+    if (nextProps.errors) {
+      this.setState({ errors: nextProps.errors });
+    }
   }
 
   onChange = (e) => {
@@ -20,75 +39,101 @@ class Register extends Component {
 
   onSubmit = (e) => {
     e.preventDefault();
-    const userData = {
-      nombre: this.state.nombre,
+    const newUser = {
+      name: this.state.name,
       email: this.state.email,
       password: this.state.password,
       password2: this.state.password2,
     };
-    console.log(userData);
+    //Reset
+    this.props.registerUser(newUser, this.props.history);
   };
 
   render() {
+    const { errors } = this.state;
     return (
       <div className="form mt-3 mb-3">
         <form onSubmit={this.onSubmit} className="form-container">
           <div>
-            {/* Name */}
+            {/* Name// aqui en vez de poner "name" como en la base de datos pusieron "nombre" por eso no recibia el valor nombre */}
             <div className="mb-3">
-              <label htmlFor="name" className="form-label">
+              <label htmlFor="name" className="form-label">  
                 Nombre
               </label>
               <input
                 onChange={this.onChange}
-                value={this.state.nombre}
-                type="nombre"
-                className="form-control"
-                id="nombre"
+                value={this.state.name}
+                error={errors.name}
+                type="name"
+                id="name"
                 aria-describedby="emailHelp"
+                // Errors.name exist?
+                className={classnames("form-control", {
+                  invalid: errors.name,
+                })}
               />
+              {/* Show errors.name if exist */}
+              <span className="text-danger">{errors.name}</span> {/* por aqui tenia un display none lo que no permitia ver los errors*/}
             </div>
 
             {/* Email */}
             <div className="mb-3">
-              <label htmlFor="exampleInputEmail1" className="form-label">
+              <label htmlFor="email" className="form-label">
                 Email
               </label>
               <input
                 onChange={this.onChange}
                 value={this.state.email}
+                error={errors.email}
                 type="email"
-                className="form-control"
                 id="email"
                 aria-describedby="emailHelp"
+                className={classnames("form-control", {
+                  invalid: errors.email,
+                })}
               />
+              {errors.email && (
+                   <span className="text-danger">{errors.email}</span>
+                 )}
             </div>
             {/* Password */}
             <div className="mb-3">
-              <label htmlFor="exampleInputPassword1" className="form-label">
+              <label htmlFor="password" className="form-label">
                 Contraseña
               </label>
               <input
                 onChange={this.onChange}
                 value={this.state.password}
+                error={errors.password}
                 type="password"
-                className="form-control"
                 id="password"
+                className={classnames("form-control", {
+                  invalid: errors.password,
+                })}
               />
+              {errors.password && (
+                   <span className="text-danger">{errors.password}</span>
+                 )}
             </div>
 
             {/* Confirm */}
             <div className="mb-3">
-              <label htmlFor="confirmPassword" className="form-label">
+              <label htmlFor="password2" className="form-label">
                 Confirmar la contraseña
               </label>
               <input
                 onChange={this.onChange}
                 value={this.state.password2}
+                error={errors.password2}
                 type="password"
-                className="form-control"
                 id="password2"
+                className={classnames("form-control", {
+                  invalid: errors.password2,
+                })}
               />
+              {errors.password2 && (
+                   <span className="text-danger">{errors.password2}</span>
+                 )}
             </div>
 
             {/* <Link to="/"> */}
@@ -107,4 +152,15 @@ class Register extends Component {
   }
 }
 
-export default Register;
+// Verify!!
+Register.propTypes = {
+  registerUser: PropTypes.func.isRequired, // Check that registerUser is a function and is required
+  auth: PropTypes.object.isRequired,
+  errors: PropTypes.object.isRequired,
+};
+
+const mapStateToProps = (state) => ({
+  auth: state.auth,
+  errors: state.errors,
+});
+export default connect(mapStateToProps, { registerUser })(withRouter(Register));

@@ -16,18 +16,19 @@ let Domicilios = require("../models/domicilios");
 // Validate register
 router.post("/register", (req, res) => {
   // Check validation
+
   const { errors, isValid } = validateRegister(req.body);
 
   if (!isValid) {
-    res.status(400).json(errors);
+    return res.status(400).json(errors);
   }
 
   User.findOne({ email: req.body.email }).then((user) => {
     if (user) {
-      res.status(400).json({ email: "Email already exists" });
+      return res.status(400).json({ email: "Email already exists" });
     } else {
       const newUser = new User({
-        name: req.body.name,
+        nombre: req.body.nombre,
         email: req.body.email,
         password: req.body.password,
       });
@@ -37,11 +38,10 @@ router.post("/register", (req, res) => {
         bcrypt.hash(newUser.password, salt, (err, hash) => {
           if (err) throw err;
           newUser.password = hash;
-          console.log(newUser.password);
           newUser
             .save()
             .then((user) => res.json(user))
-            .catch((err) => console.log(err));
+            .catch((err) => console.log("Heree" + err));
         });
       });
     }
@@ -74,7 +74,7 @@ router.post("/login", (req, res) => {
         // Create JWT token
         const payload = {
           id: user.id,
-          name: user.name,
+          name: user.nombre,
         };
 
         //Sign token

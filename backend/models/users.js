@@ -4,9 +4,18 @@ const Schema = mongoose.Schema;
 const userSchema = Schema ({
     nombre: String,
     email: String,
-    direccion: String,
-    cedula: Number,
-    telefono: Number,
+    direccion: {
+        type: String,
+        default: ""
+    },
+    cedula: {
+        type: Number,
+        default: ""
+    },
+    telefono: {
+        type: Number,
+        default: ""
+    },
     disable: {
         type: Boolean,
         default: false
