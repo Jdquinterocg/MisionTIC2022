@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
 
 * {
+	
 	padding: 0;
 	margin: 0;
 	box-sizing: border-box;
@@ -14,7 +15,7 @@ main {
     max-width: 1200px;
     background: #FDFAF6;
 	/*height: 1800px;ACÁ AJUSTO LA ALTURA*/
-	height: calc(100vh + 450px);
-	margin: 50px auto;
+	
+	margin: 30px auto;
 	overflow: hidden; /*Lo que esté fuera del contenedor no se ve*/
 }
