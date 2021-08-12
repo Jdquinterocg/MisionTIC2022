@@ -9,7 +9,6 @@ import img4 from '../imagenes/img-home/4.jpg';
 import Cards from '../components/Cards'
 import Cats from '../components/categoria'
 
-
 const Home = () => {
 	return (
 		<main>
@@ -51,9 +50,6 @@ const Home = () => {
 			</Slideshow>
 			<Cats />
 			<Cards />
-			
-
-			
 		</main>
 	);
 }
