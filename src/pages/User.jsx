@@ -1,5 +1,5 @@
 import React from 'react'
-import uniqid from 'uniqid'
+import axios from 'axios'
 
 import Usuario from '../components/info/Usuario'
 import Pedidos from '../components/info/Pedidos'
@@ -30,8 +30,8 @@ class User extends React.Component {
 }
         
     render() {
-        const user = this.state.data.usuario;
-        const domicilios = this.state.data.domicilio;
+        const user = this.state.usuario;
+        const domicilios = this.state.domicilio;
         console.log(domicilios);
         return (
             <div className="Hero">
