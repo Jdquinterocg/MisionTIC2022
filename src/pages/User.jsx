@@ -19,14 +19,14 @@ class User extends React.Component {
                     .then((response) => this.setState({
                             usuario: response.data,
                     }))
-                    // .then(res => console.log('Response axios users:' + res.data))
+                    .then(res => console.log('Response axios users:' + res.data))
                     .catch(err => console.log('Error in axios: ' + err.message));
                 
                 axios.get('http://localhost:5000/domicilios/')
                     .then((response) => this.setState({
                             domicilio: response.data
                     }))
-                    // .then(res => console.log('Response axios domicilios:' + res.data))
+                    .then(res => console.log('Response axios domicilios:' + res.data))
                     .catch(err => console.log('Error in axios: ' + err.message));
 }
         
@@ -39,8 +39,7 @@ class User extends React.Component {
                 { user.map((user, key) => {
                     return (
                         <Usuario key = {key}
-                            nombre={user.nombre}
-                            apellido={user.apellido}
+                            nombre={user.name}
                             direccion={user.direccion} 
                             cedula={user.cedula} 
                             telefono={user.telefono}

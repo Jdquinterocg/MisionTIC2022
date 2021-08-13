@@ -28,7 +28,7 @@ router.post("/register", (req, res) => {
       return res.status(400).json({ email: "Email already exists" });
     } else {
       const newUser = new User({
-        nombre: req.body.nombre,
+        name: req.body.name,
         email: req.body.email,
         password: req.body.password,
       });
@@ -104,7 +104,8 @@ router.route("/usuario").get(async (req, res, next) => {
       console.log(`Sorry, I can't do this: ${err.message}`);
       return next(err);
     } else {
-      console.log(data);
+      console.log("Llegué a la ruta")
+      // console.log(data);
       res.json(data);
     }
   });

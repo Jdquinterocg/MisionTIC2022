@@ -2,7 +2,7 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const userSchema = Schema ({
-    nombre: String,
+    name: String,
     email: String,
     direccion: {
         type: String,
@@ -22,11 +22,6 @@ const userSchema = Schema ({
     },
     password: String,
     // It Allow us to establish a relationship between user and deliveries databases
-    // domicilios: [{
-    //     type: Schema.Types.ObjectId, 
-    //     ref: 'Domicilios'
-
-    // }]
 },
 {
     collection: "Users",

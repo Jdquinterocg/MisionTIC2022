@@ -7,6 +7,7 @@ const domicilioSchema = Schema ({
     hora: String,
     valor: Number,
     productos: Array,
+    user: String
 },
 {
     collection: "Domicilios",
