@@ -21,7 +21,7 @@ function Header() {
         <div className="header__menu--profile">
         <div className="col-1 text-center">
           <img src={user} alt="User" />
-          <h6 className="header-link"><a href="/domicilios">Usuario</a></h6>
+          <h6 className="header-link"><a href="/usuario">Usuario</a></h6>
           </div>
           
         </div>
