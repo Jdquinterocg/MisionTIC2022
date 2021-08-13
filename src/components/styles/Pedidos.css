@@ -4,10 +4,11 @@
 
 .pedido {
     background: #FAF1E6;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.5);
+    box-shadow: 2px 2px 4px #E4EFE7;
     border-radius: 8px 8px 8px 8px;
     overflow: hidden;
     display: block;
+    padding: 30px;
 }
 
 .horario {

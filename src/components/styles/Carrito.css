@@ -1,6 +1,11 @@
 .carrito {
     background-color: #FDFAF6;
     padding: 15px;
+    /* centrado absoluto: */
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; */
     }
 
 .title {
@@ -59,6 +64,16 @@
     color: #064420;
     text-shadow: 2px 2px 5px #064420
     }
+
+    .confirma {
+        background-color: #FDFAF6;
+        padding: 15px;
+        /* centrado absoluto: */
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 60vh;
+        }
 
     .aviso {
         background-color: #E4EFE7;

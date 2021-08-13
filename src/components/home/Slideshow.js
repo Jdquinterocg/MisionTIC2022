@@ -7,8 +7,8 @@ const Slideshow = ({
 		children,
 		controles = false,
 		autoplay = false,
-		velocidad="500",
-		intervalo="5000"
+		velocidad="300",
+		intervalo="3000"
 	}) => {
 	const slideshow = useRef(null);
 	const intervaloSlideshow = useRef(null);
@@ -116,7 +116,7 @@ const Slide = styled.div`
 	overflow: hidden;
 	transition: .3s ease all;
 	z-index: 10;
-	/* max-height: 500px; */
+	max-height: 300px;
 	position: relative;
 
 	img {
@@ -126,19 +126,20 @@ const Slide = styled.div`
 `;
 
 const TextoSlide = styled.div`
-	background: ${props => props.colorFondo ? props.colorFondo : 'rgba(0,0,0,.3)'};
-	color: ${props => props.colorTexto ? props.colorTexto : '#fff'};
-	width: 100%;
-	padding: 10px 60px;
-	text-align: center;
-	
-	bottom: 0;
+    background: ${props => props.colorFondo ? props.colorFondo : '#064420'};
+    color: ${props => props.colorTexto ? props.colorTexto : '#FDFAF6'};
+    width: 100%;
+    padding: 1px;
+    text-align: center;
+    
+    bottom: 0;
 
-	@media screen and (max-width: 700px) {
-		position: relative;
-		background: #000;
-	}
+    @media screen and (max-width: 700px) {
+        position: relative;
+        background: #000;
+    }
 `;
+
 
 const Controles = styled.div`
 	position: absolute;

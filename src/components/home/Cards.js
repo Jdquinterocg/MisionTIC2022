@@ -42,7 +42,8 @@ const cards = [
 
 function Cards() {
     return (
-        <div className="container d-flex  align-items-center h-50">
+        <div className="container align-items-center">
+            <div className="row"><p></p></div>
             <div className="row">
                 {
                     cards.map(card =>(
@@ -54,6 +55,9 @@ function Cards() {
                 }        
               
             </div>
+            <div className="row"><p></p></div>
+            <div className="row"><p></p></div>
+            <div className="row"><p></p></div>
             
         </div>
     )

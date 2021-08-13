@@ -12,39 +12,40 @@ import Cats from '../components/home/categoria'
 const Home = () => {
 	return (
 		<main>
-			<Titulo>Buenas veci, ¿En qué podemos colaborarle?</Titulo>
+			
+			<Titulo>¡Buenas veci! ¿Qué necesita hoy?</Titulo>
 			<Slideshow controles={true} autoplay={true} velocidad="3000" intervalo="5000">
 				<Slide>
-					<a href="https://www.google.com">
-						<img src={img1} alt=""/>
-					</a>
-					<TextoSlide colorFondo="navy">
+				<	TextoSlide>
 						<p>Contamos con variedad de frutas y verduras</p>
 					</TextoSlide>
+					<a href="https://www.google.com">
+						<img src={img1} alt=""/>
+					</a>					
 				</Slide>
 				<Slide>
-					<a href="https://www.google.com">
-						<img src={img2} alt=""/>
-					</a>
 					<TextoSlide>
 						<p>Tenemos las mejores marcas en productos de aseo</p>
 					</TextoSlide>
+					<a href="https://www.google.com">
+						<img src={img2} alt=""/>
+					</a>					
 				</Slide>
 				<Slide>
-					<a href="https://www.google.com">
-						<img src={img3} alt=""/>
-					</a>
-					<TextoSlide>
+				<TextoSlide>
 						<p>Lácteos con el mejor precio</p>
 					</TextoSlide>
+					<a href="https://www.google.com">
+						<img src={img3} alt=""/>
+					</a>					
 				</Slide>
 				<Slide>
+					<TextoSlide>
+						<p>Y muchos productos más...</p>
+					</TextoSlide>
 					<a href="https://www.google.com">
 						<img src={img4} alt=""/>
-					</a>
-					<TextoSlide colorFondo="navy">
-						<p>Y muchos productos más</p>
-					</TextoSlide>
+					</a>					
 				</Slide>
 			</Slideshow>
 			<Cats />
@@ -52,12 +53,13 @@ const Home = () => {
 		</main>
 	);
 }
-
+// text-transform: uppercase;
 const Titulo = styled.p`
 	font-size: 18px;
 	font-weight: 700;
-	text-transform: uppercase;
-	margin-bottom: 10px;
+	color: #064420;
+	
+	margin-bottom: 3px;
 `;
- 
+
 export default Home;
