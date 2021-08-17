@@ -11,6 +11,7 @@ const validateLogin = require("../validation/login");
 let User = require("../models/users");
 let Domicilios = require("../models/domicilios");
 let Productos = require("../models/productos");
+let InfoCarrito = require("../models/carrito");
 
 // Routes
 
@@ -181,5 +182,21 @@ router.route("/varios").get(async (req, res, next) => {
     }
   });
 });
+
+// ---------------------------------------------------------
+
+//Carrito
+
+router.route("/carrito").post((req, res, next) => {
+  InfoCarrito.create({pedidos: req.body}, (err, data) => {
+    if (err){
+      console.log("Error trying to go to carrito: " + err.message);
+      return next(err)
+    } else {
+      console.log(data);
+      res.json(data);
+    }
+  })
+})
 
 module.exports = router;
