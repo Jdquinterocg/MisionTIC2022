@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { Link } from "react-router-dom";
 
 import "../styles/Catalogo.css";
 
@@ -102,13 +103,20 @@ class Fruver extends Component {
                             alt={producto.descripcion}
                           />
                         </div>
-                        <div className="col">
+                        <div className="col-5">
                           <h6> {producto.descripcion}</h6>
                           <p>Precio: ${producto.precio}</p>
                           <p>Categoría: {producto.categoria}</p>
                           <button className="btn btn-success" onClick={(e) => this.handleOnclick(producto, e)}>
                             Añadir al carrito
                           </button>
+                        </div>
+                        <div className="col-3">
+                        <Link to="/compras">
+                          <button className="btn btn-success">
+                              Ir al carrito
+                          </button>
+                        </Link>
                         </div>
                       </div>
                     </li>
