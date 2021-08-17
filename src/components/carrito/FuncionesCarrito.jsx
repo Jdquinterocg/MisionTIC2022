@@ -12,21 +12,21 @@ function FuncionesCarrito(props) {
         <div className="text-center">
           <h2 className="title">Carrito de Compras</h2>
           <div className="tabla">
-            <div class="row">
-              <div class="col">
+            <div className="row">
+              <div className="col">
                 <strong>Producto</strong>
               </div>
-              <div class="col">
+              <div className="col">
                 <strong>Precio</strong>
               </div>
-              <div class="col">
+              <div className="col">
                 <strong>Cantidad</strong>
               </div>
-              <div class="col">
+              <div className="col">
                 <strong>Subtotal </strong>
               </div>
-              <div class="col-1"></div>
-              <div class="col-1"></div>
+              <div className="col-1"></div>
+              <div className="col-1"></div>
             </div>
             <hr />
 
@@ -55,7 +55,7 @@ function FuncionesCarrito(props) {
               })}
             </ul>
 
-            <div class="row justify-content-end">
+            <div className="row justify-content-end">
               {/* parámetro -> total          */}
               <div className="col-6 fs-5">
                 {" "}

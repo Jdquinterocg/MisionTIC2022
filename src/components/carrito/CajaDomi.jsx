@@ -11,22 +11,22 @@ class CajaDomi extends Component {
           <h6>Confirme dirección de envío</h6>
           <h7>Calle 12 # 34 - 01</h7>
           {/* Dirección registrada */}
-          <input type="checkbox" class="form-check-input m-1"></input>
+          <input type="checkbox" className="form-check-input m-1"></input>
           <div className="row  mt-2">
             <label className="col align-items-center">
               Enviar a otra dirección
             </label>{" "}
           </div>
           <div className="row mb-1">
-            <input class="form-control" placeholder="Nueva dirección"></input>
+            <input className="form-control" placeholder="Nueva dirección"></input>
           </div>
           <label className="col align-items-center">Propina:</label>
           <div className="row mb-1">
-            <input class="form-control" placeholder="$ valor"></input>
+            <input className="form-control" placeholder="$ valor"></input>
           </div>
           <label className="col align-items-center">¿Devuelta de cuánto?</label>
           <div className="row mb-3">
-            <input class="form-control" placeholder="$ valor"></input>
+            <input className="form-control" placeholder="$ valor"></input>
           </div>
           <Link to="/confirmaDomicilio">
             <button className="buttonConfirmar m-1"> Confirmar pedido </button>

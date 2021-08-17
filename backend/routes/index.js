@@ -10,6 +10,7 @@ const validateLogin = require("../validation/login");
 
 let User = require("../models/users");
 let Domicilios = require("../models/domicilios");
+let Productos = require("../models/productos");
 
 // Routes
 
@@ -98,6 +99,8 @@ router.post("/login", (req, res) => {
   });
 });
 
+// -------------------------------------------------------
+
 router.route("/usuario").get(async (req, res, next) => {
   await User.find({}, (err, data) => {
     if (err) {
@@ -113,6 +116,63 @@ router.route("/usuario").get(async (req, res, next) => {
 
 router.route("/domicilios").get(async (req, res, next) => {
   await Domicilios.find({}, (err, data) => {
+    if (err) {
+      console.log(`Sorry, I can't do this: ${err.message}`);
+      return next(err);
+    } else {
+      res.json(data);
+    }
+  });
+});
+// ---------------------------------------------------------
+
+// Productos
+
+// Aseo
+router.route("/aseo").get(async (req, res, next) => {
+  let path = req.path.slice(1,-1);
+  await Productos.find({ categoria: path }, (err, data) => {
+    if (err) {
+      console.log(`Sorry, I can't do this: ${err.message}`);
+      return next(err);
+    } else {
+      console.log(data);
+      res.json(data);
+    }
+  });
+});
+
+// Lacteos
+router.route("/lacteos").get(async (req, res, next) => {
+  let path = req.path.slice(1,-1);
+  await Productos.find({ categoria: path }, (err, data) => {
+    if (err) {
+      console.log(`Sorry, I can't do this: ${err.message}`);
+      return next(err);
+    } else {
+      // console.log(data);
+      res.json(data);
+    }
+  });
+});
+
+// Fruver
+router.route("/fruver").get(async (req, res, next) => {
+  let path = req.path.slice(1,-1);
+  await Productos.find({ categoria: path }, (err, data) => {
+    if (err) {
+      console.log(`Sorry, I can't do this: ${err.message}`);
+      return next(err);
+    } else {
+      res.json(data);
+    }
+  });
+});
+
+// Varios
+router.route("/varios").get(async (req, res, next) => {
+  let path = req.path.slice(1,-1);
+  await Productos.find({ categoria: path }, (err, data) => {
     if (err) {
       console.log(`Sorry, I can't do this: ${err.message}`);
       return next(err);
