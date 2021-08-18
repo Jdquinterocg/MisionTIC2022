@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 // parámetro -> total
 function FuncionesCarrito(props) {
   const carrito = props.carro;
+  console.log(carrito)
 
   return (
     <div className="carrito">
@@ -30,16 +31,17 @@ function FuncionesCarrito(props) {
             </div>
             <hr />
 
+            {/* Map */}
             <ul className="list-unstyled">
-              {carrito.map((producto) => {
+              {carrito.map((producto, index) => {
                 if(producto.newOrder) { 
                   producto = producto.newOrder[0];
                 }
                 return (
-                  <li key={producto._id}>
+                  <li key={index}>
                     <div className="text-center">
                       <div className="row align-items-center">
-                        <div className="col">{producto.nombre}</div>
+                        <div className="col">{producto.producto}</div>
                         <div className="col">${producto.precio}</div>
                         <div className="col">{producto.cantidad}</div>
                         <div className="col">

@@ -27,7 +27,7 @@ class Fruver extends Component {
             productos:res.data,
           },
         });
-        console.log(res.data)
+        // console.log(res.data)
       })
       // .then(res => console.log(res.data))
       .catch(err => console.log("Error in axios: " + err.message));
@@ -35,16 +35,16 @@ class Fruver extends Component {
 
   // Create an array with the products chosen
   handleOnclick = async (producto, e) => {
-    const newOrder = [{
+    const newOrder = {
       producto: producto.descripcion,
       precio: producto.precio,
       cantidad: 1
-    }]
+    }
     if(this.state.data.pedido === undefined){
       await this.setState({
         data:{
           productos: this.state.data.productos,
-          pedido: [{ newOrder }],
+          pedido: [ newOrder ],
         },
       })
     } 
@@ -52,19 +52,15 @@ class Fruver extends Component {
       await this.setState({
         data:{
           productos: this.state.data.productos,
-          pedido: [...newOrder, ...this.state.data.pedido],
+          pedido: [ ...this.state.data.pedido, newOrder ],
         },
       })
     }
     console.log(this.state.data.pedido)
-  }
-
-  // Saving order in the database
-  handleCarrito = () => {
-    const productosPedido = this.state.data.pedido;
-    console.log(productosPedido)
+    
+    // Sending the order to carrito
     axios
-      .post("http://localhost:5000/carrito", productosPedido)
+      .post("http://localhost:5000/carrito", this.state.data.pedido)
       .then(() => console.log("Order sent to carrito"))
       .catch((err) => ("Error in axios: " + err.message))
   }
@@ -107,12 +103,15 @@ class Fruver extends Component {
             <div className="col-6">
               <ul className="list-unstyled">
                 {fruver.map((producto, index) => {
+                  let imagen = producto.imagen.replaceAll("../", "");
+                  imagen = require("../../" + imagen);
+                  console.log(imagen);
                   return (
                     <li className="container m-3" key={index}>
                       <div className="row tabla align-items-center">
                         <div className="col-4 text-center">
                           <img
-                            src={`${producto.imagen}`}
+                            src={imagen.default}
                             alt={producto.descripcion}
                           />
                         </div>

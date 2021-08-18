@@ -199,15 +199,16 @@ router.route("/carrito").post((req, res, next) => {
   })
 })
 
+// Just the last order is required
 router.route("/compras").get(async (req, res, next) => {
-  await InfoCarrito.find({}, (err, data) => {
+  await InfoCarrito.findOne({}, (err, data) => {
     if (err) {
       console.log(`Sorry, I can't do this: ${err.message}`);
       return next(err);
     } else {
       res.json(data);
     }
-  })
+  }).limit(1).sort({_id: '-1'})
 })
 
 module.exports = router;
