@@ -27,8 +27,9 @@ class Fruver extends Component {
             productos:res.data,
           },
         });
+        console.log(res.data)
       })
-      //.then(res => console.log(res.data))
+      // .then(res => console.log(res.data))
       .catch(err => console.log("Error in axios: " + err.message));
   };
 
@@ -36,7 +37,8 @@ class Fruver extends Component {
   handleOnclick = async (producto, e) => {
     const newOrder = [{
       producto: producto.descripcion,
-      precio: producto.precio
+      precio: producto.precio,
+      cantidad: 1
     }]
     if(this.state.data.pedido === undefined){
       await this.setState({
@@ -45,7 +47,8 @@ class Fruver extends Component {
           pedido: [{ newOrder }],
         },
       })
-    } else {
+    } 
+    else {
       await this.setState({
         data:{
           productos: this.state.data.productos,
@@ -59,7 +62,7 @@ class Fruver extends Component {
   // Saving order in the database
   handleCarrito = () => {
     const productosPedido = this.state.data.pedido;
-    // console.log(productosPedido)
+    console.log(productosPedido)
     axios
       .post("http://localhost:5000/carrito", productosPedido)
       .then(() => console.log("Order sent to carrito"))
@@ -122,11 +125,11 @@ class Fruver extends Component {
                           </button>
                         </div>
                         <div className="col-3">
-                        {/* <Link to="/compras"> */}
+                        <Link to="/compras">
                           <button className="btn btn-success" onClick={this.handleCarrito}>
                               Ir al carrito
                           </button>
-                        {/* </Link> */}
+                        </Link>
                         </div>
                       </div>
                     </li>

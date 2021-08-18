@@ -32,8 +32,11 @@ function FuncionesCarrito(props) {
 
             <ul className="list-unstyled">
               {carrito.map((producto) => {
+                if(producto.newOrder) { 
+                  producto = producto.newOrder[0];
+                }
                 return (
-                  <li key={producto.id}>
+                  <li key={producto._id}>
                     <div className="text-center">
                       <div className="row align-items-center">
                         <div className="col">{producto.nombre}</div>

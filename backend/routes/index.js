@@ -199,4 +199,15 @@ router.route("/carrito").post((req, res, next) => {
   })
 })
 
+router.route("/compras").get(async (req, res, next) => {
+  await InfoCarrito.find({}, (err, data) => {
+    if (err) {
+      console.log(`Sorry, I can't do this: ${err.message}`);
+      return next(err);
+    } else {
+      res.json(data);
+    }
+  })
+})
+
 module.exports = router;
