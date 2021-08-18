@@ -105,7 +105,6 @@ class Fruver extends Component {
                 {fruver.map((producto, index) => {
                   let imagen = producto.imagen.replaceAll("../", "");
                   imagen = require("../../" + imagen);
-                  console.log(imagen);
                   return (
                     <li className="container m-3" key={index}>
                       <div className="row tabla align-items-center">

@@ -97,14 +97,14 @@ class Lacteos extends Component {
             <div className="col-6">
               <ul className="list-unstyled">
                 {lacteos.map((producto) => {
-                  img = producto.imagen;
-                  console.log(img)
+                  let imagen = producto.imagen.replaceAll("../", "");
+                  imagen = require("../../" + imagen);
                   return (
                     <li className="container m-3" key={producto._id}>
                       <div className="row tabla align-items-center">
                         <div className="col-4 text-center">
                           <img
-                            src={img}
+                            src={imagen.default}
                             alt={producto.descripcion}
                           />
                         </div>

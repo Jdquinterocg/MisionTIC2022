@@ -96,12 +96,14 @@ class Varios extends Component {
             <div className="col-6">
               <ul className="list-unstyled">
                 {varios.map((producto, index) => {
+                  let imagen = producto.imagen.replaceAll("../", "");
+                  imagen = require("../../" + imagen);
                   return (
                     <li className="container m-3" key={index}>
                       <div className="row tabla align-items-center">
                         <div className="col-4 text-center">
                           <img
-                            src={`${producto.imagen}`}
+                            src={imagen.default}
                             alt={producto.descripcion}
                           />
                         </div>
