@@ -1,0 +1,28 @@
+.usuario {
+    background: #E4EFE7;
+    box-shadow: 2px 2px 4px #064420;
+    border-radius: 8px 8px 8px 8px;
+    overflow: hidden;
+    display: block;
+    font-size: 18px;
+    
+}
+
+.titulo {
+    font-weight: bold;
+    color:#064420
+}
+
+.perfil {
+    border-radius: 50%;
+    height: 150px;
+    width: 150px;
+    margin: 10px;
+    border: 10px solid transparent
+}
+
+.info {
+    display: block;
+    text-align: center;
+    margin: auto;
+}

@@ -1,0 +1,105 @@
+.catalogo {
+    background-color: #FDFAF6;
+    /* centrado absoluto: */
+    /* display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh; */
+    padding: 15px;
+    }
+
+.title {
+    background-color: #E4EFE7;
+    padding: 5px;
+    }
+
+.tabla {
+        background-color: #FAF1E6;
+        padding: 15px;
+        }
+
+        .categorias {
+            color:#064420;
+            text-decoration: none;
+        }
+        .categorias a{
+            color:#064420;
+            text-decoration: none;
+        }
+        .categorias a:hover{
+            color:#064420;
+            text-decoration: underline;
+        }
+
+.cantidad {
+    background-color: #FDFAF6;
+    margin: 0 auto;
+    width: 30px;
+    border: 1px solid #064420;
+    align-items: center;
+    }
+
+.button {
+    background-color: #FDFAF6; 
+    color: #064420; 
+    border: 2px solid #064420;
+    border-radius: 6px;
+    }
+      
+.button:hover {
+    background-color: #064420;
+    color: #FDFAF6;
+    }
+
+.buttonCantidad {
+    background-color: #E4EFE7; 
+    color: #064420; 
+    border: 1px solid #E4EFE7;
+    border-radius: 50px;
+      }
+
+.buttonCantidad:hover {
+    background-color: #E4EFE7;
+    color: #064420;
+    border: 1px solid #064420;
+    text-shadow: 2px 2px 5px #064420
+    }
+
+.buttonConfirmar {
+    background-color: #064420;
+    color: #FDFAF6;
+    border: 2px solid #064420;
+    border-radius: 6px;
+    }
+
+.buttonConfirmar:hover {
+    background-color: #E4EFE7;
+    color: #064420;
+    text-shadow: 2px 2px 5px #064420
+    }
+
+    .aviso {
+        background-color: #E4EFE7;
+        padding: 15px;
+        color: #064420;
+        justify-content: center;
+        align-items: center;
+        text-align: center; 
+        box-shadow: 0px 0px 7px 7px rgba(0,0,0,0.26);
+        }
+
+    .formulario {
+      background-color: #FAF1E6;
+      padding: 15px;
+
+      height: 320px;
+    width: 300px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 7px 11px rgba(0,0,0,0.26); 
+    box-shadow: 0px 0px 7px 11px rgba(0,0,0,0.26);
+
+      }
+

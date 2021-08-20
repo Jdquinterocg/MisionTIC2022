@@ -1,0 +1,26 @@
+.titulo {
+    font-weight: bold;
+}
+
+.pedido {
+    background: #FAF1E6;
+    box-shadow: 2px 2px 4px #E4EFE7;
+    border-radius: 8px 8px 8px 8px;
+    overflow: hidden;
+    display: block;
+    padding: 30px;
+}
+
+.horario {
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-size: 18px;
+}
+
+.productos {
+    display: block;
+    text-align: center;
+    margin: auto;
+    font-size: 18px;
+}
