@@ -108,7 +108,7 @@ router.route("/usuario").get(async (req, res, next) => {
       console.log(`Sorry, I can't do this: ${err.message}`);
       return next(err);
     } else {
-      console.log("Llegué a la ruta")
+      console.log("Llegué a la ruta");
       // console.log(data);
       res.json(data);
     }
@@ -125,13 +125,35 @@ router.route("/domicilios").get(async (req, res, next) => {
     }
   });
 });
+
+// Post domicilios
+router.route("/saveDomicilio").post((req, res, next) => {
+  console.log(req.body)
+  Domicilios.create(
+    {
+      fecha: req.body.fecha,
+      hora: req.body.hora,
+      valor: req.body.valor,
+      productos: req.body.productos,
+    },
+    (err, data) => {
+      if (err) {
+        console.log("Error trying to go to carrito: " + err.message);
+        return next(err);
+      } else {
+        console.log(data);
+        res.json(data);
+      }
+    }
+  );
+});
 // ---------------------------------------------------------
 
 // Productos
 
 // Aseo
 router.route("/aseo").get(async (req, res, next) => {
-  let path = req.path.slice(1,-1);
+  let path = req.path.slice(1, -1);
   await Productos.find({ categoria: path }, (err, data) => {
     if (err) {
       console.log(`Sorry, I can't do this: ${err.message}`);
@@ -145,7 +167,7 @@ router.route("/aseo").get(async (req, res, next) => {
 
 // Lacteos
 router.route("/lacteos").get(async (req, res, next) => {
-  let path = req.path.slice(1,-1);
+  let path = req.path.slice(1, -1);
   await Productos.find({ categoria: path }, (err, data) => {
     if (err) {
       console.log(`Sorry, I can't do this: ${err.message}`);
@@ -159,7 +181,7 @@ router.route("/lacteos").get(async (req, res, next) => {
 
 // Fruver
 router.route("/fruver").get(async (req, res, next) => {
-  let path = req.path.slice(1,-1);
+  let path = req.path.slice(1, -1);
   await Productos.find({ categoria: path }, (err, data) => {
     if (err) {
       console.log(`Sorry, I can't do this: ${err.message}`);
@@ -172,7 +194,7 @@ router.route("/fruver").get(async (req, res, next) => {
 
 // Varios
 router.route("/varios").get(async (req, res, next) => {
-  let path = req.path.slice(1,-1);
+  let path = req.path.slice(1, -1);
   await Productos.find({ categoria: path }, (err, data) => {
     if (err) {
       console.log(`Sorry, I can't do this: ${err.message}`);
@@ -188,16 +210,16 @@ router.route("/varios").get(async (req, res, next) => {
 //Carrito
 
 router.route("/carrito").post((req, res, next) => {
-  InfoCarrito.create({pedidos: req.body}, (err, data) => {
-    if (err){
+  InfoCarrito.create({ pedidos: req.body }, (err, data) => {
+    if (err) {
       console.log("Error trying to go to carrito: " + err.message);
-      return next(err)
+      return next(err);
     } else {
       console.log(data);
       res.json(data);
     }
-  })
-})
+  });
+});
 
 // Just the last order is required
 router.route("/compras").get(async (req, res, next) => {
@@ -208,7 +230,9 @@ router.route("/compras").get(async (req, res, next) => {
     } else {
       res.json(data);
     }
-  }).limit(1).sort({_id: '-1'})
-})
+  })
+    .limit(1)
+    .sort({ _id: "-1" });
+});
 
 module.exports = router;

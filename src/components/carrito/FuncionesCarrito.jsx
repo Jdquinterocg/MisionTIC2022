@@ -1,11 +1,34 @@
 import React from "react";
-import "../styles/Carrito.css";
 import { Link } from "react-router-dom";
+
+import axios from "axios";
+
+import "../styles/Carrito.css";
 
 // parámetro -> total
 function FuncionesCarrito(props) {
   const carrito = props.carro;
   console.log(carrito)
+
+  const handleOnclick = (e) => {
+    console.log('Here I am')
+    const time = Date.now();
+    const today = new Date(time);
+    
+    const date = today.toLocaleDateString();
+    const hour = today.getHours() + ':' + today.getMinutes() + ':' + today.getSeconds(); 
+
+    const newOrder = {
+      fecha: date,
+      hora: hour,
+      valor: props.total,
+      productos: props.array,
+    }
+    axios
+      .post("http://localhost:5000/saveDomicilio/", newOrder)
+      .then(() => console.log('Order sent to user'))
+      .catch((err) => console.log("Error in axios (Sending domi)" + err.message))
+  }
 
   return (
     <div className="carrito">
@@ -73,10 +96,10 @@ function FuncionesCarrito(props) {
           <button className="button m-1"> Seleccionar más productos </button>
         </Link>
         <Link to="/recoge">
-          <button className="button float-end m-1"> Recoger en tienda </button>
+          <button className="button float-end m-1" onClick={handleOnclick}> Recoger en tienda </button>
         </Link>
         <Link to="/domi">
-          <button className="button float-end m-1"> Pedir a domicilio </button>
+          <button className="button float-end m-1" onClick={handleOnclick}> Pedir a domicilio </button>
         </Link>
       </div>
     </div>

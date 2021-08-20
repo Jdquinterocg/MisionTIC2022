@@ -29,13 +29,16 @@ class Carrito extends Component {
         : [];
 
     let total = 0;
+    let namesArray = [];
     for (let i in carro) {
       let subtotal = carro[i].precio * carro[i].cantidad;
       total += subtotal;
+      namesArray = [...namesArray, carro[i].producto];
+      // console.log(namesArray)
     }
     return (
       <div>
-        <FuncionesCarrito carro={carro} total={total} />
+        <FuncionesCarrito carro={carro} total={total} array={namesArray} />
       </div>
     );
   }

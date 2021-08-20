@@ -11,7 +11,7 @@ class CajaRecoge extends Component {
           <h6>Puede recoger su pedido en nuestra tienda física</h6>
           <label className="col align-items-center">¿Devuelta de cuánto?</label>
           <div className="row mb-3">
-            <input class="form-control" placeholder="$ valor"></input>
+            <input className="form-control" placeholder="$ Valor"></input>
           </div>
           <Link to="/confirmaRecoge">
             <button className="buttonConfirmar m-1"> Confirmar pedido </button>

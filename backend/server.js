@@ -5,6 +5,7 @@ const morgan = require("morgan");
 const cors = require("cors");
 const bodyParser = require("body-parser");
 const passport = require("passport");
+const session = require('express-session')
 
 const app = express();
 
@@ -26,6 +27,7 @@ app.use(cors());
 // Db config
 const db = require('./config/keys').mongoURI;
 
+
 //Connect to MongoDB
 mongoose
     .connect(db, { useNewUrlParser: true, useUnifiedTopology: true })
@@ -36,10 +38,13 @@ mongoose
 const routes = require("./routes/index");
 
 
-// Passport middleware
-app.use(passport.initialize());
 // Passport config
 require("./config/passport")(passport);
+// Passport middleware
+const secret = require('./config/keys').secretOrKey;
+app.use(session({ secret: secret, resave:true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Routes
 app.use('/', routes);

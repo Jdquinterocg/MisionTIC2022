@@ -30,32 +30,29 @@ class Aseo extends Component {
   handleOnclick = async (producto, e) => {
     const newOrder = [{
       producto: producto.descripcion,
-      precio: producto.precio
+      precio: producto.precio,
+      cantidad: 1
     }]
     if(this.state.data.pedido === undefined){
       await this.setState({
         data:{
           productos: this.state.data.productos,
-          pedido: [{ newOrder }],
+          pedido: [ newOrder ],
         },
       })
     } else {
       await this.setState({
         data:{
           productos: this.state.data.productos,
-          pedido: [...newOrder, ...this.state.data.pedido],
+          pedido: [newOrder, ...this.state.data.pedido],
         },
       })
     }
     console.log(this.state.data.pedido)
-  }
-
-  // Saving order in the database
-  handleCarrito = () => {
-    const productosPedido = this.state.data.pedido;
-    // console.log(productosPedido)
+    
+    // Sending the order to carrito
     axios
-      .post("http://localhost:5000/carrito", productosPedido)
+      .post("http://localhost:5000/carrito", this.state.data.pedido)
       .then(() => console.log("Order sent to carrito"))
       .catch((err) => ("Error in axios: " + err.message))
   }

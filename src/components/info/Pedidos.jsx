@@ -40,14 +40,14 @@ class Pedidos extends React.Component {
                           <br />
                           <ul className="list-group">
                             <strong>Productos: </strong>{" "}
-                            {entrega.Productos.map((producto, id) => {
+                            {entrega.productos.map((producto, id) => {
                               return (
                                 <p
                                   className="list-group-item pedido-producto "
                                   key={id}
                                   style={{ color:"black"}}
                                 >
-                                  {producto.name}
+                                  {producto}
                                 </p>
                               );
                             })}
