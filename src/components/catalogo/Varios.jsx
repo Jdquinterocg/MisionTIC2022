@@ -8,54 +8,54 @@ class Varios extends Component {
   state = {
     data: {
       productos: [],
-      pedido: []
+      pedido: [],
     },
   };
 
-  componentDidMount(){
+  componentDidMount() {
     axios
       .get("http://localhost:5000/varios/")
-      .then(res => {
+      .then((res) => {
         this.setState({
-          data:{
-            productos:res.data
-          }
+          data: {
+            productos: res.data,
+          },
         });
       })
-      .then(res => console.log(res.data))
-      .catch(err => console.log("Error in axios: " + err.message));
-  };
+      .then((res) => console.log(res.data))
+      .catch((err) => console.log("Error in axios: " + err.message));
+  }
 
   // Create an array with the products chosen
   handleOnclick = async (producto, e) => {
-    const newOrder = [{
+    const newOrder = {
       producto: producto.descripcion,
       precio: producto.precio,
-      cantidad: 1
-    }]
-    if(this.state.data.pedido === undefined){
+      cantidad: 1,
+    };
+    if (this.state.data.pedido === undefined) {
       await this.setState({
-        data:{
+        data: {
           productos: this.state.data.productos,
-          pedido: [ newOrder ],
+          pedido: [newOrder],
         },
-      })
+      });
     } else {
       await this.setState({
-        data:{
+        data: {
           productos: this.state.data.productos,
-          pedido: [newOrder, ...this.state.data.pedido],
+          pedido: [...this.state.data.pedido, newOrder],
         },
-      })
+      });
     }
-    console.log(this.state.data.pedido)
+    console.log(this.state.data.pedido);
 
     // Sending the order to carrito
     axios
       .post("http://localhost:5000/carrito", this.state.data.pedido)
       .then(() => console.log("Order sent to carrito"))
-      .catch((err) => ("Error in axios: " + err.message))
-  }
+      .catch((err) => "Error in axios: " + err.message);
+  };
 
   render() {
     const productos = this.state.data.productos;
@@ -108,16 +108,19 @@ class Varios extends Component {
                           <h6> {producto.descripcion}</h6>
                           <p>Precio: ${producto.precio}</p>
                           <p>Categoría: {producto.categoria}</p>
-                          <button className="btn btn-success" onClick={(e) => this.handleOnclick(producto, e)}>
+                          <button
+                            className="btn btn-success"
+                            onClick={(e) => this.handleOnclick(producto, e)}
+                          >
                             Añadir al carrito
                           </button>
                         </div>
                         <div className="col-3">
-                        <Link to="/compras">
-                          <button className="btn btn-success">
+                          <Link to="/compras">
+                            <button className="btn btn-success">
                               Ir al carrito
-                          </button>
-                        </Link>
+                            </button>
+                          </Link>
                         </div>
                       </div>
                     </li>

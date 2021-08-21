@@ -28,11 +28,11 @@ class Aseo extends Component {
 
   // Create an array with the products chosen
   handleOnclick = async (producto, e) => {
-    const newOrder = [{
+    const newOrder = {
       producto: producto.descripcion,
       precio: producto.precio,
       cantidad: 1
-    }]
+    }
     if(this.state.data.pedido === undefined){
       await this.setState({
         data:{
