@@ -51,7 +51,6 @@ function App() {
             <Route exact path="/" component={Home} />
             <Route exact path="/login" component={Login} />
             <Route exact path="/register" component={Register} />
-            <Route exact path="/domicilios" component={User} />
             <Route exact path="/domi" component={CajaDomi} />
             <Route exact path="/recoge" component={CajaRecoge} />
             <Route exact path="/confirmaRecoge" component={ConfirmaRecogida} />
@@ -62,6 +61,7 @@ function App() {
             <Route exact path="/varios" component={Varios} />
 
             <PrivateRoute exact path="/compras" component={Carrito} />
+            <PrivateRoute exact path="/domicilios" component={User} />
           </Switch>
         </Layout>
       </BrowserRouter>
